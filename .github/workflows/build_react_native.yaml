@@ -19,7 +19,8 @@ jobs:
     - name: build
       run: |
         cd android
-        gradle build
+        chmod +x gradlew
+        ./gradlew build
         find . -name '*.apk'
 
     - name: deploy
