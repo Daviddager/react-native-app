@@ -1,0 +1,19 @@
+on:
+  push:
+
+  workflow_dispatch:
+    inputs:
+      debug_tf:
+        default: false
+        description: "Enable TF Debug"
+
+      environment:
+        description: "Choose your deploy env"
+        default: 'test'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World"
+
